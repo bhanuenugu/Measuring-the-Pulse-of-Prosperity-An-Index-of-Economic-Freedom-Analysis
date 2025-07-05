@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Measuring the Pulse of Prosperity: An Index of Economic Freedom Analysis</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    nav { background: #f0f0f0; padding: 10px; text-align: center; }
+    nav a { margin: 0 15px; text-decoration: none; font-weight: bold; color: #0077cc; }
+    nav a:hover { text-decoration: underline; }
+    .content { display: none; padding: 20px; }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#story">Story</a>
+  </nav>
+
+  <!-- HOME -->
+  <div id="home" class="content active">
+    <h1>Measuring the Pulse of Prosperity: An Index of Economic Freedom Analysis</h1>
+    <h3>Introduction</h3>
+    <p>Economic freedom is the fundamental right of individuals to control their own labor and property...</p>
+    <ul>
+      <li><strong>Rule of Law:</strong> property rights, judicial effectiveness, government integrity</li>
+      <li><strong>Government Size:</strong> government spending, tax burden, fiscal health</li>
+      <li><strong>Regulatory Efficiency:</strong> business freedom, labor freedom, monetary freedom</li>
+      <li><strong>Open Markets:</strong> trade freedom, investment freedom, financial freedom</li>
+    </ul>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="content">
+    <h2>About</h2>
+    <p>This project brings economic freedom data to life through interactive Tableau dashboards and engaging data stories...</p>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="content">
+    <h2>Dashboard</h2>
+    <div class='tableauPlaceholder' id='viz1751642186086' style='position: relative' data-loaded="false">
+      <noscript>
+        <a href='#'>
+          <img alt='Dashboard 1' src='https://public.tableau.com/static/images/ne/new_dashboard_17515987140100/Dashboard1/1_rss.png' style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='new_dashboard_17515987140100&#47;Dashboard1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/ne/new_dashboard_17515987140100/Dashboard1/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <div id="story" class="content">
+    <h2>Story</h2>
+    <div class='tableauPlaceholder' id='viz1751642469563' style='position: relative' data-loaded="false">
+      <noscript>
+        <a href='#'>
+          <img alt='Story 1' src='https://public.tableau.com/static/images/ne/new_dashboard_17515987140100/Story1/1_rss.png' style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='new_dashboard_17515987140100&#47;Story1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/ne/new_dashboard_17515987140100/Story1/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+  </div>
+
+  <!-- NAVIGATION SCRIPT + Lazy Loading -->
+  <script>
+    function loadTableauScript(vizId) {
+      const divElement = document.getElementById(vizId);
+      const vizElement = divElement.getElementsByTagName('object')[0];
+      if (divElement.getAttribute('data-loaded') === 'true') return;
+      vizElement.style.display = 'block';
+      vizElement.style.width = '100%';
+      vizElement.style.height = window.innerHeight * 0.8 + 'px';
+      const scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      divElement.setAttribute('data-loaded', 'true');
+    }
+
+    const links = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('.content');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        sections.forEach(sec => sec.classList.remove('active'));
+        const target = document.querySelector(link.getAttribute('href'));
+        target.classList.add('active');
+        if (link.getAttribute('href') === '#dashboard') loadTableauScript('viz1751642186086');
+        if (link.getAttribute('href') === '#story') loadTableauScript('viz1751642469563');
+      });
+    });
+  </script>
+</body>
+</html>
