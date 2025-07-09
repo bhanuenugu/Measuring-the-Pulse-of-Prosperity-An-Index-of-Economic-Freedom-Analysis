@@ -26,6 +26,13 @@ Tableau Storyboard
 https://public.tableau.com/app/profile/enugu.bhanu/viz/new_dashboard_17515987140100/Story1?publish=yes
 
 🌐 Live Application
+
+💻 Live Web Application (Deployed):
+
+http://44.201.129.71
+
+💻 Live Web video
+
 https://drive.google.com/file/d/1mKkZBkH9kV4r6nwUrfuS1tvvN4L8JVtE/view?usp=drivesdk
 
 👥 Team BHANU ENUGU 
