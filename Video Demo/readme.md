@@ -21,9 +21,20 @@ A complete walkthrough of the project including dashboards, insights, and intera
 https://drive.google.com/file/d/1EtTgc_nSov824O2Oxz3WI8QsFEIEjHcu/view?usp=drivesdk
 
 🛠️ Technologies Used
+
 Tableau Public for interactive visualizations
 
+HTML/CSS – For frontend structure and design
+
+AWS EC2 – For deploying the web application and hosting it live via a public IP
+
 🌐 Live Application
+
+💻 Live Web Application (Deployed):
+
+http://44.201.129.71
+
+💻 Live Web video 
 https://drive.google.com/file/d/1mKkZBkH9kV4r6nwUrfuS1tvvN4L8JVtE/view?usp=drivesdk
 
 © 2025 Measuring the Pulse of Prosperity Project
